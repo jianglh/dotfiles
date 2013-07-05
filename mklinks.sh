@@ -6,6 +6,6 @@ for dotfile in .?*
 do
 	if [ $dotfile != '..' ] && [ $dotfile != '.git' ]
 	then
-		ln -s $PWD/$dotfile ~/$dotfile
+		ln -sf $PWD/$dotfile ~/$dotfile
 	fi
 done
