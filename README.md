@@ -1,4 +1,10 @@
 dotfiles
-========
+=========
+linux config files collection
 
-linux config files collection.  vim tmux
+usage
+--------
+
+	git clone
+	cd dotfiles
+	./mklinks.sh
