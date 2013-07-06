@@ -9,3 +9,4 @@ usage
 	cd dotfiles
 	./mklinks.sh
 	./bundleinstall.sh
+	patch -p0 < winmanager.patch

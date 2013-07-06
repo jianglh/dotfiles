@@ -1,0 +1,10 @@
+--- .vim/bundle/winmanager/plugin/winmanager.vim	2013-07-05 23:38:41.354900020 +0800
++++ .vim/bundle/winmanager/plugin/winmanager.vim	2013-07-06 10:45:02.725294850 +0800
+@@ -1062,6 +1062,7 @@
+ 		call s:CloseWindowsManager()
+ 	else
+ 		call s:StartWindowsManager()
++		exe 'q'
+ 	end
+ endfunction
+ 
