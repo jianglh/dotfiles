@@ -5,7 +5,7 @@ set mouse=a
 
 colorscheme torte
 
-nnoremap <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
+nnoremap <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>:!cscope -Rbq <CR>:cscope reset<CR><CR>
 map <F11> :WMToggle<CR>
 
 set nocompatible               " be iMproved
@@ -25,6 +25,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
+Bundle 'simplyzhao/cscope_maps.vim'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
