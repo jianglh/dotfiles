@@ -3,10 +3,9 @@ set tabstop=4
 set shiftwidth=4
 set mouse=a
 
-colorscheme torte
 
 nnoremap <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>:!cscope -Rbq <CR>:cscope reset<CR><CR>
-map <F11> :WMToggle<CR>
+map <F9> :WMToggle<CR>
 
 set nocompatible               " be iMproved
 filetype off                   " required!
@@ -26,6 +25,9 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
 Bundle 'simplyzhao/cscope_maps.vim'
+Bundle 'Lokaltog/vim-distinguished'
+Bundle 'tomasr/molokai'
+colorscheme molokai
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -34,7 +36,8 @@ Bundle 'The-NERD-tree'
 Bundle 'winmanager'
 Bundle 'bufexplorer.zip'
 Bundle 'taglist.vim'
-Bundle 'OmniCppComplete'
+Bundle 'clang-complete'
+"Bundle 'OmniCppComplete'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (ie. when working on your own plugin)
@@ -78,16 +81,11 @@ function! NERDTree_IsValid()
     return 1
 endfunction
 
-"OmniCppComplete
-set nocp
-filetype plugin on
+"clang-complete
 
-let OmniCpp_NamespaceSearch = 1      
-let OmniCpp_GlobalScopeSearch = 1      
-let OmniCpp_ShowScopeInAbbr = 1
-let OmniCpp_ShowPrototypeInAbbr = 1
-let OmniCpp_ShowAccess = 1      
-let OmniCpp_MayCompleteDot = 1
-let OmniCpp_MayCompleteArrow = 1      
-let OmniCpp_MayCompleteScope = 1      
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+let g:clang_complete_copen=1
+let g:clang_hl_errors=1
+let g:clang_snippets=1
+let g:clang_close_preview=1
+let g:clang_use_library=1
+let g:clang_user_options='-std=c++11 -I/usr/include'
