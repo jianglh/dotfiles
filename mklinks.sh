@@ -9,7 +9,9 @@ for dotfile in .?*
 do
 	if [ $dotfile != '..' ] && [ $dotfile != '.git' ]
 	then
-		mv ~/$dotfile $PWD/$backup/
+		mv -f  ~/$dotfile $PWD/$backup/
 		ln -sf $PWD/$dotfile ~/$dotfile
 	fi
 done
+
+git config --global core.excludesfile ~/.gitignore
