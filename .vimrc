@@ -5,7 +5,7 @@ set mouse=a
 
 
 nnoremap <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>:!cscope -Rbq <CR>:cscope reset<CR><CR>
-map <F9> :WMToggle<CR>
+map <F9> :WMToggle<CR>:Tagbar<CR>
 
 set nocompatible               " be iMproved
 filetype off                   " required!
@@ -28,6 +28,8 @@ Bundle 'simplyzhao/cscope_maps.vim'
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'tomasr/molokai'
 colorscheme molokai
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'majutsushi/tagbar'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -63,7 +65,7 @@ let g:miniBufExplModSelTarget=1
 let g:miniBufExplMoreThanOne=0
 
 "WinManager
-let g:winManagerWindowLayout='NERDTree|TagList'
+let g:winManagerWindowLayout='NERDTree'
 
 " For NERDTree plugin
 "autocmd vimenter * NERDTree
