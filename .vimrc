@@ -30,6 +30,7 @@ Bundle 'tomasr/molokai'
 colorscheme molokai
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'majutsushi/tagbar'
+Bundle 'lekv/vim-clewn'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
