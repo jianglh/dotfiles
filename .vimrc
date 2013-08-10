@@ -31,6 +31,7 @@ colorscheme molokai
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'majutsushi/tagbar'
 Bundle 'lekv/vim-clewn'
+Bundle 'justinmk/vim-syntax-extra'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
