@@ -3,6 +3,8 @@ set tabstop=4
 set shiftwidth=4
 set mouse=a
 
+colorscheme default
+set background=dark
 
 nnoremap <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>:!cscope -Rbq <CR>:cscope reset<CR><CR>
 map <F9> :WMToggle<CR>:Tagbar<CR>
@@ -27,7 +29,7 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'simplyzhao/cscope_maps.vim'
 Bundle 'Lokaltog/vim-distinguished'
 Bundle 'tomasr/molokai'
-colorscheme molokai
+"colorscheme molokai
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'majutsushi/tagbar'
 Bundle 'lekv/vim-clewn'
