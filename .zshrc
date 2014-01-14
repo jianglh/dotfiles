@@ -46,4 +46,4 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/local/sbin:/usr/sbin:/home/chnlkw/.local/bin:/home/chnlkw/bin
+export PATH=$PATH:"/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/bin:/sbin"
