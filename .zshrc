@@ -47,3 +47,4 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:"/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/bin:/sbin"
+export PATH=$PATH:$HOME/bin:"/usr/local/cuda/bin"
