@@ -19,16 +19,15 @@ fi
 
 # Parameters & environment variables {{{1
 WORDCHARS='*?_-[]~=&;!#$%^(){}<>'
-export SCALA_HOME=/opt/scala-2.10.1
-export PATH=$SCALA_HOME/bin:/opt/texlive/2012/bin/x86_64-linux:$HOME/.cabal/bin:$HOME/bin:~/.local/bin:~/.gem/ruby/2.0.0/bin:$HOME/bin/ssh:$PATH:/home/ray/Cross/toolchain-mips_r2_gcc-4.3.3+cs_uClibc-0.9.30.1/usr/bin
-export PATH=$SCALA_HOME/bin:~/.cabal/bin:~/bin:~/.local/bin:~/.gem/ruby/2.0.0/bin:~/bin/ssh:$PATH
+#export SCALA_HOME=/opt/scala-2.10.1
+#export PATH=$SCALA_HOME/bin:/opt/texlive/2012/bin/x86_64-linux:$HOME/.cabal/bin:$HOME/bin:~/.local/bin:~/.gem/ruby/2.0.0/bin:$HOME/bin/ssh:$PATH:/home/ray/Cross/toolchain-mips_r2_gcc-4.3.3+cs_uClibc-0.9.30.1/usr/bin
+#export PATH=$SCALA_HOME/bin:~/.cabal/bin:~/bin:~/.local/bin:~/.gem/ruby/2.0.0/bin:~/bin/ssh:$PATH
 export EDITOR=vim
-#export PATH=$PATH:/home/ray/.local/opt/admb-11-linux-gcc4.6.1-64bit/bin
-export LESS="-MiR --shift 5"
+#export LESS="-MiR --shift 5"
 export GREP_OPTIONS='--color=auto'
 export MENUCONFIG_COLOR=blackbg
 export SUDO_PROMPT=$'[\e[31;5msudo\e[m] password for \e[33;1m%p\e[m: '
-export WINEPATH=z:\\opt\\mingw\\i686-w64-mingw32\\lib
+#export WINEPATH=z:\\opt\\mingw\\i686-w64-mingw32\\lib
 
 # Look {{{1
 PROMPT=$'\n%F{blue}\u256d\u2500%F{CYAN}%B%F{cyan}%n %F{white}@ %B%F{magenta}%m %F{yellow}[%D{%H:%M:%S}] %F{white}>>= %B%F{green}%~ %1(j,%F{red}:%j,)\n%F{blue}\u2570\u2500%(?..[$: %?] )%{%F{red}%}%# %F{white}'
@@ -54,8 +53,8 @@ fi
 
 # Options {{{1
 # History {{{2
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=100000
 HISTFILE=~/.history/zsh
 unsetopt flowcontrol
 setopt hist_ignore_all_dups     # when runing a command several times, only store one
@@ -235,6 +234,9 @@ bindkey '\C-x\C-e' edit-command-line
 (bin-exist cowsay) && (bin-exist fortune) && command_not_found_handler() { fortune -s| cowsay -W 70}
 
 # Utils {{{1
+# keyboard rate
+xset r rate 200 50
+
 # show 256 color tab
 256tab() {
     for k in `seq 0 1`;do
@@ -250,18 +252,18 @@ cowfiles=(/usr/share/cowsay-3.03/cows/*)
 bindkey -s '^zm' "toilet -f bigmono12 --gay<<<'hi all';sleep 2\n"'while :; do fortune -s | cowsay -f${cowfiles[$RANDOM % ${#cowfiles[@]} + 1]}; sleep 0.3; done'"\n"
 
 # OPAM configuration
-. /home/ray/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+#. /home/ray/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # Pinyin Completion
-[[ -d $HOME/.zsh/Pinyin-Completion ]] && source $HOME/.zsh/Pinyin-Completion/shell/pinyin-comp.zsh && export PATH=$PATH:$HOME/.zsh/Pinyin-Completion/bin
+#[[ -d $HOME/.zsh/Pinyin-Completion ]] && source $HOME/.zsh/Pinyin-Completion/shell/pinyin-comp.zsh && export PATH=$PATH:$HOME/.zsh/Pinyin-Completion/bin
 
-export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/home/ray/perl5";
-export PERL_MB_OPT="--install_base /home/ray/perl5";
-export PERL_MM_OPT="INSTALL_BASE=/home/ray/perl5";
-export PERL5LIB="/home/ray/perl5/lib/perl5:$PERL5LIB";
-export PATH="/home/ray/perl5/bin:$PATH";
+#export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/home/ray/perl5";
+#export PERL_MB_OPT="--install_base /home/ray/perl5";
+#export PERL_MM_OPT="INSTALL_BASE=/home/ray/perl5";
+#export PERL5LIB="/home/ray/perl5/lib/perl5:$PERL5LIB";
+#export PATH="/home/ray/perl5/bin:$PATH";
 
-[[ -f $HOME/.zsh_local ]] && sou#rce $HOME/.zsh_local
+[[ -f $HOME/.zsh_local ]] && source $HOME/.zsh_local
                                 #
                                 #
                                 #
